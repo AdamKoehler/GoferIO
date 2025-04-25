@@ -1,0 +1,75 @@
+# Gofer - Errand Management System
+
+## Overview
+Gofer is an errand management platform inspired by DoorDash, designed to connect users with local helpers who can fulfill various tasks and errands. Whether it's picking up items, running errands, or handling custom orders, Gofer makes it easy to get things done efficiently.
+
+## Features
+- Create and manage errands
+- Find and fulfill errands in your local area
+- Real-time email notifications with confirmation codes
+- Location-based search using zip codes
+- order tracking system
+
+## Tech Stack
+-**Frontend**: HTML/CSS
+- **Backend**: Node.js with Express
+- **Database**: MongoDB (Mongoose)
+- **Email Service**: Nodemailer
+- **Location Services**: ZipCodeAPI
+
+## Prerequisites
+- Node.js installed
+- MongoDB account
+- Gmail account (for email notifications)
+- ZipCodeAPI key
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/AdamKoehler/GoferIO
+   cd gofer
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file in the root directory with the following variables:
+   ```
+   MONGODB_URI=your_mongodb_connection_string
+   NODEMAILER_USER=your_gmail_address
+   NODEMAILER_PASS=your_gmail_app_password
+   ZIPCODE_API_KEY=your_zipcode_api_key
+   ```
+
+4. Start the server:
+   ```bash
+   node server
+   ```
+
+5. Open your browser and navigate to:
+   ```
+   http://localhost:3000
+   ```
+
+## How It Works
+
+### For Users
+1. Create a new errand by filling out the order form
+2. Receive a unique confirmation code via email
+3. Use the confirmation code to track, edit, or cancel your errand
+
+### For Helpers
+1. Enter your zip code and preferred search radius
+2. Browse available errands in your area
+3. Accept errands that match your preferences
+
+## Security Features
+- Unique confirmation codes for each order
+- Secure email notifications
+
+## Development Notes
+- The project uses MongoDB's VSCode extension for easy database management
+- Postman was used for API testing and documentation
